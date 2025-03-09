@@ -1,5 +1,5 @@
 import { AbortController } from 'abortcontroller-polyfill/dist/cjs-ponyfill'
-import { TextEncoder, TextDecoder } from 'util'
+import 'core-js/stable'
 import { JSDOM } from 'jsdom'
 
 function setUpDomEnvironment() {
@@ -26,5 +26,3 @@ function copyProps(src, target) {
 setUpDomEnvironment()
 
 global.AbortController = AbortController
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
